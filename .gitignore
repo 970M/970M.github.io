@@ -1,3 +1,4 @@
 .vscode
 settings.json
-.code-workspace
+*.code-workspace
+970M-github-io.code-workspace
