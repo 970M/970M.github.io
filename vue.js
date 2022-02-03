@@ -10,7 +10,13 @@ app.component("nav-bar", {
     template: "#nav-bar",
     name: "NavBar",
 });
-const Note = app.component("nav-bar");
+const NavBar = app.component("nav-bar");
+
+app.component("presentation", {
+    template: "#presentation",
+    name: "Presentation",
+});
+const Presentation = app.component("presentation");
 
 // ----------------------------------
 // Router

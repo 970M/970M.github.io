@@ -1,3 +1,59 @@
+// ----------------------------------
+// Data
+//-----------------------------------
+
+const xps = [
+    {
+        id: "Safran",
+        description:
+            "Développement d’un système de détection de piétons par caméra infra-rouge pour des applications en automobile (projet PreVENT).",
+        skills: [
+            "C/C++",
+            "Visual.NET",
+            "Matlab",
+            "OpenCV",
+            "Matrox Image Library (MIL)",
+            "Reconnaissance de Forme",
+        ],
+        img: "assets/img/safran.JPG",
+    },
+    {
+        id: "Johnson Controls",
+        description:
+            "Pilote fonctionnel pour un projet de conception d'outils de diagnostique automobile (PROXIA)",
+        skills: ["C/C++", "Bash"],
+        img: "assets/img/johnson-controls.JPG",
+    },
+    {
+        id: "Safran",
+        description:
+            "Développement d’un système de détection de piétons par caméra infra-rouge pour des applications en automobile (projet PreVENT).",
+        skills: [
+            "C/C++",
+            "Visual.NET",
+            "Matlab",
+            "OpenCV",
+            "Matrox Image Library (MIL)",
+            "Reconnaissance de Forme",
+        ],
+        img: "assets/img/safran.JPG",
+    },
+    {
+        id: "Safran",
+        description:
+            "Développement d’un système de détection de piétons par caméra infra-rouge pour des applications en automobile (projet PreVENT).",
+        skills: [
+            "C/C++",
+            "Visual.NET",
+            "Matlab",
+            "OpenCV",
+            "Matrox Image Library (MIL)",
+            "Reconnaissance de Forme",
+        ],
+        img: "assets/img/safran.JPG",
+    },
+];
+
 const blocs = document.querySelectorAll(".categ");
 
 blocs.forEach((element) => {
@@ -47,47 +103,35 @@ blocs.forEach((element) => {
     // --- Variables
     // Calculs initials
     var element = document.querySelector(".menu");
+    console.log(element);
     var rect = element.getBoundingClientRect();
-    var top = rect.top + window.scrollY;
-
-    // Creer un élément fake
-    var fake = document.createElement("div");
-    fake.style.with = rect.width + "px";
-    fake.style.height = rect.heigth + "px";
-
+    var top = rect.top + scrollY();
     // --- Fonctions
     var onScroll = function () {
+        console.log(window.scrollY);
         var hasScrollClass = element.classList.contains("fixed");
-        // if (element.getBoundingClientRect().top <= 0) {
-        if (window.scrollY > top && !hasScrollClass) {
-            console.log("Add");
-
-            // Ajouter une class fixed
+        if (scrollY() > top && !hasScrollClass) {
             element.classList.add("fixed");
             element.style.width = rect.width + "px";
-            // Recuperer l'élément parent et lui ajout fake avant element
-            element.parentNode.insertBefore(fake, element);
-        } else if (window.scrollY <= top && hasScrollClass) {
-            console.log("Remove");
-            // Supprimer la class fixed
+        } else if (scrollY() <= top && hasScrollClass) {
             element.classList.remove("fixed");
-            element.parentNode.removeChild(fake);
         }
     };
 
-    var onResize = function () {
-        // Défaire le style
-        element.style.width = "auto";
-        element.classList.remove("fixed");
-        fake.style.display = "none";
-        // Recalculer les positions
-        rect = element.getBoundingClientRect();
-        top = rect.top + window.scrollY;
-        // Remettre le style
-        fake.style.with = rect.width + "px";
-        fake.style.height = rect.height + "px";
-        onScroll();
-    };
+    // var onResize = function () {
+    //     // Défaire le style
+    //     element.style.width = "auto";
+    //     element.classList.remove("fixed");
+    //     fake.style.display = "none";
+    //     // Recalculer les positions
+    //     rect = element.getBoundingClientRect();
+    //     top = rect.top + window.scrollY;
+    //     // Remettre le style
+    //     fake.style.with = rect.width + "px";
+    //     fake.style.height = rect.height + "px";
+    //     onScroll();
+    // };
+
     // --- Listener
     window.addEventListener("scroll", onScroll);
     window.addEventListener("resize", onResize);
