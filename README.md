@@ -53,7 +53,7 @@ Mettre à jour régulièrement le logbook afin de constituer un journal de bord.
 
 ## JOURNAL DE BORD
 
-####> 2022-02-06
+#### > 2022-02-06
 
 **Ordre du jour**
 
