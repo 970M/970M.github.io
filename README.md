@@ -83,3 +83,19 @@ Lancement du projet et initialisation du fichier README.MD
 -   Architecture du site
 -   Mise en place de Vue CLI
 -   Détailler les exigences, définir une livraison
+
+#### > 2022-02-20
+
+**_Info_**
+
+Projet en standby pour suivre la formation Web Mozilla Developer Network (MDN)
+
+---
+
+#### > YYYY-MM-DD
+
+**Ordre du jour**
+
+**Points soulevés / Action**
+
+**Prochaines séances (ordres du jour)**
