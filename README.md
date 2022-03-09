@@ -8,16 +8,16 @@ Acquérir des compétences dans les technologies Web à travers le développemen
 
     Objectifs :
 
-    --oo HTML/CSS
-    --oo Javascript
-    ---o Vue
+    -ooo HTML/CSS
+    -ooo Javascript
+    --oo Vue
     ---- Vue CLI
     --oo Vue-Router
     --oo Git / GitHub (gestion des branches)
     ---- Tests Unitaires /navigateur
     ---- Intégrer une BDD
-    ---- Node JS / PHP ?
-    ---- API
+    ---o Node JS
+    ---o API
 
     ---- Inconnu, ---o Insuffisant, --oo Moyen, -ooo Bon, oooo Maîtrisé
 
