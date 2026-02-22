@@ -1,113 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./style.css" />
-        <title>GD W012X</title>
-    </head>
-    <body>
-        <div id="app">
-            <!-- <home></home>
-            <works></works> -->
-            <router-view></router-view>
-        </div>
-
-        <script type="text/x-template" id="nav-bar">
-            <div class="nav">
-                <div class="menu">
-                    <li>
-                        <router-link to="/" class="categ">Home</router-link>
-                    </li>
-
-                    <li>
-                        <router-link to="/works" class="categ">Works</router-link>
-                        <ul class="sub-menu">
-                            <router-link to="/works" class="categ">XP</router-link>
-                        </ul>
-                        <ul class="sub-menu">
-                            <router-link to="/tools" class="categ">Tools</router-link>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <router-link to="/skills" class="categ">Skills</router-link>
-                    </li>
-
-                    <li>
-                        <router-link to="/contact" class="categ">Contact</router-link>
-                    </li>
-                </div>
-            </div>
-        </script>
-
-        <script type="text/x-template" id="presentation">
-            <div class="card">
-                <h1>Prénom<br />Nom</h1>
-                <!-- <hr class="line" /> -->
-                <h2 class="profession">Profession</h2>
-                <p class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nobis blanditiis voluptate cupiditate suscipit fugiat
-                    repellendus sapiente cumque, asperiores eaque, odio
-                    blanditiis nobis maiores. Culpa, voluptatem.
-                </p>
-                <h2 class="gd">[+|]</h2>
-            </div>
-        </script>
-
-        <script type="text/x-template" id="home">
-            <div class="home">
-
-                <nav-bar></nav-bar>
-
-                <header>
-
-                    <presentation></presentation>
-                    <div class="hepta-box">
-                        <img class="hepta" src="./assets/image-0.png" alt="hepta" />
-                    </div>
-                </header>
-
-                <works></works>
-                <skills></skills>
-                <footer></footer>
-
-            </div>
-        </script>
-
-        <script type="text/x-template" id="works">
-            <div class="works">
-                <div class="works-container">
-                    <div class="work-xp" v-for="item in 144">
-                        {{ item }}
-                    </div>
-                </div>
-            </div>
-        </script>
-
-        <script type="text/x-template" id="skills">
-            <div class="skills">
-
-            </div>
-        </script>
-
-        <!-- <script type="text/x-template" id="skills">
-            <div class="skills">
-                <h2>Skills</h2>
-            </div>
-        </script>
-
-        <script type="text/x-template" id="Contact">
-            <div class="contact">
-                <h2>Contact</h2>
-            </div>
-        </script> -->
-
-        <script src="https://unpkg.com/vue@next"></script>
-        <script src="https://unpkg.com/vue-router@4.0.5/dist/vue-router.global.js"></script>
-        <script src="vue.js"></script>
-        <script src="index.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GD W012X</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

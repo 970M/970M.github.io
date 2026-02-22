@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Merriweather+Sans:wght@700&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Passion+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Passion+One&family=Paytone+One&display=swap");
+
+:root {
+  /* 970M theme */
+  --g-bleu1: #324680;
+  --g-blue2: #3a71b2;
+  --g-blue3: #5888a2;
+  --g-red: #ff1700;
+  --g-orange1: #ff6500;
+  --g-orange2: #ffba0b;
+  --g-pink: #ff7683;
+  --g-gold: #ffba60;
+  --g-brown: #ffdaa0;
+
+  /* My Gruvbox */
+  --color1: #fb4934;
+  --color2: #98971a;
+  --color3: #fabd2f;
+  --color4: #44797c;
+  --color5: #d4879c;
+  --color6: #83a598;
+  --color7: #031417;
+  --color8: #e7d7ad;
+
+  /* Gruvbox Dark */
+  --bg: #282828;
+  --fg: #ebdbb2;
+  --bg0_h: #1d2021;
+  --bg0_s: #32302f;
+  --bg0: #282828;
+  --bg1: #3c3836;
+  --bg2: #504945;
+  --bg3: #665c54;
+  --bg4: #7c6f64;
+  --fg0: #fbf1c7;
+  --fg1: #ebdbb2;
+  --fg2: #d5c4a1;
+  --fg3: #bdae93;
+  --fg4: #a89984;
+  --orange_l: #d65d0e;
+  --orange_d: #fe8019;
+  --red_l: #cc241d;
+  --red_d: #fb4934;
+  --green_l: #98971a;
+  --green_d: #b8bb26;
+  --yellow_l: #d79921;
+  --yellow_d: #fabd2f;
+  --blue_l: #458588;
+  --blue_d: #83a598;
+  --purple_l: #b16286;
+  --purple_d: #d3869b;
+  --aqua_l: #689d6a;
+  --aqua_d: #8ec07c;
+  --gray_l: #a89984;
+  --gray_d: #928374;
+
+  /* Gruvbox Light */
+  --l_bg: #fbf1c7;
+  --l_fg: #3c3836;
+  --l_bg0_h: #f9f5d7;
+  --l_bg0_s: #f2e5bc;
+  --l_bg0: #fbf1c7;
+  --l_bg1: #ebdbb2;
+  --l_bg2: #d5c4a1;
+  --l_bg3: #bdae93;
+  --l_bg4: #a89984;
+  --l_fg0: #282828;
+  --l_fg1: #3c3836;
+  --l_fg2: #504945;
+  --l_fg3: #665c54;
+  --l_fg4: #7c6f64;
+  --l_orange_l: #d65d0e;
+  --l_orange_d: #af3a03;
+  --l_red_l: #cc241d;
+  --l_red_d: #9d0006;
+  --l_green_l: #98971a;
+  --l_green_d: #79740e;
+  --l_yellow_l: #d79921;
+  --l_yellow_d: #b57614;
+  --l_blue_l: #458588;
+  --l_blue_d: #076678;
+  --l_purple_l: #b16286;
+  --l_purple_d: #8f3f71;
+  --l_aqua_l: #689d6a;
+  --l_aqua_d: #427b58;
+  --l_gray_l: #7c6f64;
+  --l_gray_d: #928374;
+
+  /* Gruvbox - 1 */
+  --dark1: #242424;
+  --dark2: #282828;
+  --dark3: #32302f;
+  --dark4: #504945;
+  --dark5: #665c54;
+  --red1: #cc241d;
+  --red2: #fb4934;
+  --orange1: #d65d0e;
+  --yellow1: #fabd2f;
+  --yellow2: #eebd35;
+  --purple1: #b16286;
+  --purple2: #d4879c;
+  --green1: #98971a;
+  --green2: #689d6a;
+  --green3: #8ec07c;
+  --blue1: #458588;
+  --blue2: #7fa2ac;
+  --blue3: #83a598;
+  --white1: #e7d7ad;
+  --white2: #dedede;
+
+  /* color-links */
+  --bg-html: var(--purple_l);
+  --color-prof: var(--blue_l);
+  --color-desc: var(--green_l);
+  --color-gd: var(--red_l);
+  --bg-topbar: var(--bg0);
+  --border-topbar: var(--aqua_d);
+  --bg-menu: var(--bg0_h);
+  --border-menu: var(--purple_d);
+  --shadow-menu: var(--aqua_l);
+  --border-active: var(--red_d);
+  --color-active: var(--red_d);
+  --color-noactive: var(--aqua_l);
+  --color-hover: var(--purple_d);
+  --color-skills: var(--orange_l);
+  --border-skills: var(--aqua_d);
+}
+
+/* ************** MAIN ******************** */
+* {
+  border: dotted 1px red;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  background-color: var(--bg-html);
+}
+
+/* ************** NAVBAR ***************** */
+
+nav {
+  text-align: center;
+}
+.menu {
+  display: inline-block;
+}
+.menu > li {
+  list-style: none;
+  text-decoration: none;
+  float: left;
+  color: #e298e1;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.sub-menu {
+  list-style: none;
+  transform: scale(0);
+  transform-origin: top center;
+  transition: all 300ms ease-in-out;
+}
+.sub-menu li {
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 8px 0;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transform: scale(0);
+  transform-origin: top center;
+  transition: all 300ms ease-in-out;
+}
+.sub-menu li:last-child {
+  border-bottom: 0;
+}
+.sub-menu li:hover {
+  background: black;
+}
+.menu > li:hover .sub-menu li {
+  transform: scale(1);
+}
+.menu > li:hover .sub-menu {
+  transform: scale(1);
+}
+
+/* **************HEADER******************** */
+
+.home {
+  background: url(/assets/image-9.jpg) no-repeat fixed top/cover;
+  background-size: cover;
+}
+
+header {
+  border: solid 3px var(--green1);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 62% 38%;
+  grid-template-rows: 62% 38%;
+  grid-template-areas:
+    "a b"
+    "a c";
+}
+
+/* **************** PRESENTATION *************** */
+
+.card {
+  grid-area: a;
+  padding: 20% 0 0 10%;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 4em;
+  font-family: "Russo One", sans-serif;
+  animation: titre ease 3.5s;
+  color: transparent;
+  background: url(/assets/image-13.jpg) fixed;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  letter-spacing: 0.3rem;
+}
+
+@keyframes titre {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+.profession {
+  padding: 2px 0 0 5px;
+  font-weight: normal;
+  letter-spacing: 0rem;
+  font-family: "Russo One", sans-serif;
+  color: var(--color-prof);
+  font-size: 30px;
+  animation: prof ease 5s;
+}
+
+@keyframes prof {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+.description {
+  padding: 5px 0 0 25px;
+  font-size: 20px;
+  font-family: "Deja Vu", sans-serif;
+  color: var(--color-desc);
+  animation: desc ease 2.5s;
+}
+
+@keyframes desc {
+  0% {
+    opacity: 0;
+    transform: translate(150px, -50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+.gd {
+  padding: 10px 0 0 5px;
+  font-family: "Deja Vu", sans-serif;
+  color: var(--color-gd);
+  font-weight: bold;
+  font-size: 30px;
+  animation: gd ease 3s;
+}
+
+@keyframes gd {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hepta-box {
+  grid-area: c;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hepta {
+  display: block;
+  width: 15vw;
+  height: 15vw;
+}
+
+/* ***************** Works ************************* */
+
+.works {
+  z-index: 0;
+  background: url(/assets/image-9.jpg) no-repeat fixed top/cover;
+  border: solid royalblue;
+  height: 100vh;
+}
+
+.works-container {
+  margin: 100px 50px 50px 50px;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.work-xp {
+  border: solid 1px royalblue;
+  color: #324680;
+  padding: 10px;
+}
+
+/* ***************** SKILLS ************************* */
+
+.skills {
+  z-index: 0;
+  background: url(/assets/image-9.jpg) no-repeat fixed top/cover;
+  height: 100vh;
+  margin-bottom: 2.5px;
+  display: grid;
+  text-align: center;
+}
+
+.bloc {
+  z-index: 2;
+  filter: brightness(0.9);
+  margin: 100px 50px 50px 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skill {
+  min-width: 50px;
+  text-align: center;
+  margin: 10px;
+  border: solid 5px var(--border-skills);
+  color: var(--color-skills);
+}
+
+.work {
+  height: 100vh;
+}
+
+/* ***************** 404 ************************* */
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--bg-html);
+  color: var(--fg1);
+  gap: 20px;
+}
+
+.not-found a {
+  color: var(--blue_l);
+  text-decoration: none;
+  font-family: "Russo One", sans-serif;
+}

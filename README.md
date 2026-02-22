@@ -90,7 +90,89 @@ Lancement du projet et initialisation du fichier README.MD
 
 Projet en standby pour suivre la formation Web Mozilla Developer Network (MDN)
 
----
+#### > 2026-02-22
+
+**Ordre du jour**
+
+Restructuration du projet avec Claude Sonnet 4.6
+
+Le projet est restructuré et le serveur de dev tourne sur http://localhost:5173/. Voici le résumé de ce qui a été fait :
+
+970M.github.io/
+├── index.html           ← point d'entrée Vite (remplacé)
+├── vite.config.js       ← config Vite (nouveau)
+├── package.json         ← dépendances Vue 3 + Vue Router + Vite (nouveau)
+├── public/
+│   └── assets/          ← images statiques (copie de assets/)
+└── src/
+    ├── main.js          ← bootstrap Vue app
+    ├── App.vue          ← composant racine
+    ├── assets/
+    │   └── style.css    ← CSS migré (url() mis à jour → /assets/...)
+    ├── router/
+    │   └── index.js     ← routes Vue Router
+    ├── components/
+    │   ├── NavBar.vue
+    │   └── PresentationCard.vue
+    ├── views/
+    │   ├── HomeView.vue
+    │   ├── WorksView.vue
+    │   ├── SkillsView.vue
+    │   ├── ContactView.vue
+    │   └── NotFoundView.vue
+    └── data/
+        └── xps.js       ← données extraites de index.js
+
+
+Commandes :
+
+npm run dev → serveur local avec HMR
+npm run build → build optimisé dans dist/ (à déployer sur GitHub Pages)
+npm run preview → prévisualiser le build
+
+**Points soulevés / Action**
+
+Les anciens fichiers racine (vue.js, index.js, style.css, assets) peuvent être supprimés une fois que tu as vérifié que tout fonctionne.
+
+
+**Prochaines séances (ordres du jour)**
+
+Deux options de déploiement :
+
+Option 1 — Déploiement manuel (simple)
+Puis pousser le contenu de dist/ sur la branche gh-pages (ou la racine de main selon ta config GitHub Pages).
+
+Option 2 — GitHub Actions (automatique, recommandé)
+Créer un fichier .github/workflows/deploy.yml qui :
+
+se déclenche à chaque git push
+lance npm run build
+déploie automatiquement dist/ sur GitHub Pages
+Un point important : le base dans vite.config.js
+Pour un GitHub user page (970M.github.io) le base: '/' actuel est correct.
+Pour un GitHub project page (970M.github.io/mon-repo) il faudrait mettre base: '/mon-repo/'.
+
+Le mode hash du router ✅
+Le router utilise déjà createWebHashHistory() (URLs avec #), ce qui est compatible GitHub Pages sans aucune configuration serveur. C'est le bon choix.
+
+
+
+Fichier GitHub Actions créé. Pour que ça fonctionne, il faut activer GitHub Pages côté GitHub :
+
+Aller dans ton repo → Settings → Pages
+Dans Source, choisir GitHub Actions (pas "Deploy from a branch")
+Sauvegarder
+Ensuite le cycle est automatique :
+
+Le workflow :
+
+se déclenche uniquement sur un push vers main
+installe les dépendances (npm ci)
+lance npm run build
+publie le contenu de dist/ sur https://970m.github.io
+
+
+
 
 #### > YYYY-MM-DD
 
@@ -99,3 +181,10 @@ Projet en standby pour suivre la formation Web Mozilla Developer Network (MDN)
 **Points soulevés / Action**
 
 **Prochaines séances (ordres du jour)**
+
+
+
+
+---
+
+

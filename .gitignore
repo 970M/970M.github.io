@@ -1,4 +1,15 @@
+# Editor
 .vscode
 settings.json
 *.code-workspace
 970M-github-io.code-workspace
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
+npm-debug.log*
